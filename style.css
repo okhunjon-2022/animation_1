@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 200vh;
+    border: 2px solid red;
+    position: relative;
+}
+
+.montain{
+    width: 100%;
+    height: 500px;
+   
+}
+.city{
+   width: 100%;
+   height: 300px;
+   transform: translateY(-300px);
+   z-index: 1;
+  
+}
+
+.road{
+    width: 100%;
+    height: 200px;
+    transform: translateY(-300px);
+    z-index: 0;
+   
+}
+.car{
+    width: 200px;
+    position: absolute;
+    top: 600px;
+    left: -300px;
+    
+
+   animation: car 10s 0s ease infinite ;
+}
+
+@keyframes car{
+    50%{
+        transform: translateX(700px) rotate(2deg) ;
+        
+    }
+    100%{
+        transform: translateX(2500px) rotate(-2deg) ;
+    }
+}
+
+.wheels{
+    width: 28px;
+    position: absolute;
+    top: 653px;
+    left: -162px;
+    animation: wheels 10s 0s infinite ease   normal forwards;
+}
+
+.wheels1{
+    width: 28px;
+    position: absolute;
+    top: 653px;
+    left: -264px;
+    animation: wheels 10s 0s infinite ease   normal forwards;
+}
+@keyframes wheels{
+    50%{
+        transform: translateX(700px) rotate(3500deg) ;
+        
+    }
+    100%{
+        transform: translateX(2500px) rotate(35000deg) ;
+    }
+}
+
+.traffic_lights{
+    width: 100px;
+    position: absolute;
+    left: 600px;
+    top: 600px;
+}
+
+.traffic_lights_red{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(223, 211, 211);
+    position: absolute;
+    left: 645px;
+    top: 610px;
+    border-radius: 50%;
+
+    animation: lights 4s  1s ;
+
+}
+@keyframes lights{
+    to{
+        background-color: red;
+    }
+}
+.traffic_lights_yellow{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(200, 200, 171);
+    position: absolute;
+    left: 645px;
+    top: 625px;
+    border-radius: 50%;
+
+    animation: yello 3s  0s infinite;
+    
+}
+@keyframes yello{
+    to{
+        background-color: gold;
+    }
+}
+
+.traffic_lights_green{
+    width: 10px;
+    height: 10px;
+    background-color: greenyellow;
+    position: absolute;
+    left: 645px;
+    top: 642px;
+    border-radius: 50%;
+
+    animation: gren 10s  4s infinite;
+
+}
+
+@keyframes gren{
+    to{
+        background-color: green;
+    }
+}
+
+
+
